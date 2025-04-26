@@ -1,0 +1,21 @@
+[server]
+# Network stack configuration
+host = "0.0.0.0"
+port = 8000
+# You can generate your key by
+# running something like `head -n 5 /dev/urandom | sha256sum`
+key = "NOT_SECURE!_CHANGE_ME_TO_SOMETHING_SECURE_01234"
+# If the server is running behind a proxy, like cloudflare or your own.
+behind-proxy = false
+# SSL configuration (unused if behind-proxy is set to true)
+ssl = { key = "./data/ssl.pem", cert = "./data/ssl.cert" }
+domain = "docs.kai.enterprises"
+
+# Directories are relative to the server executable,
+# you can set a directory to anything you want,
+# as long as the running user has permissions to it.
+[directories]
+# Directory where all the documentation is
+docs = "./docs"
+# Directory for logs
+logs = "./logs"
