@@ -34,5 +34,3 @@ logs = "./logs"
 - Run the server executable, may require running `chmod +x pawprint` beforehand, to make the file executable.
 - (optional) If you already have a running http server (like [apache](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html) or [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)), you should reverse-proxy pawprint with them.
 
-
-<a name="top">Back to top</a>
