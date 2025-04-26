@@ -17,5 +17,16 @@ domain = "docs.kai.enterprises"
 [directories]
 # Directory where all the documentation is
 docs = "./docs"
-# Directory for logs
-logs = "./logs"
+
+# Routes for the http server
+# used to specify paths to files mapped to http routes
+[routes]
+"/" = "index.md"
+
+# HTML files to show at specific errors,
+# Supports any **error** code,
+# see https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status for a list.
+[errors]
+404 = "./public/404.html"
+# Any other error code that is not defined here
+generic = "./public/error.html"

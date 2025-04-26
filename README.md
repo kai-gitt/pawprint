@@ -28,8 +28,14 @@ domain = "docs.kai.enterprises"
 [directories]
 # Directory where all the documentation is
 docs = "./docs"
-# Directory for logs
-logs = "./logs"
+
+# HTML files to show at specific errors,
+# Supports any **error** code,
+# see https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status for a list.
+[errors]
+404 = "./public/404.html"
+# Any other error code that is not defined here
+generic = "./public/error.html"
 ```
 - Run the server executable, may require running `chmod +x pawprint` beforehand, to make the file executable.
 - (optional) If you already have a running http server (like [apache](https://httpd.apache.org/docs/2.4/howto/reverse_proxy.html) or [nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)), you should reverse-proxy pawprint with them.
